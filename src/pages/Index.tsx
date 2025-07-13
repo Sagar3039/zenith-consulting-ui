@@ -93,7 +93,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Gradient */}
-        <div className="absolute inset-0 bg-gradient-hero"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-accent"></div>
         <div className="absolute inset-0 bg-black/20"></div>
         
         {/* Animated Background Elements */}
@@ -102,12 +102,12 @@ const Index = () => {
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
         </div>
 
-        <div className="relative z-10 container-custom text-center text-white">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <div className="animate-fade-in">
-            <h1 className="text-hero mb-8 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8">
               Transform Your Business 
               <br />
-              <span className="text-gradient bg-gradient-to-r from-accent-light to-white bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-accent-light to-white bg-clip-text text-transparent">
                 Achieve Excellence
               </span>
             </h1>
@@ -121,13 +121,13 @@ const Index = () => {
           </div>
 
           <div className="animate-fade-in flex flex-col sm:flex-row gap-6 justify-center items-center" style={{animationDelay: '600ms'}}>
-            <Button asChild className="btn-hero text-lg px-10 py-4">
+            <Button asChild className="bg-gradient-to-r from-primary to-primary-light text-primary-foreground px-10 py-4 rounded-lg font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg">
               <Link to="/contact">
                 Get Started Today
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            <Button asChild variant="outline" className="btn-secondary border-white/30 text-white hover:bg-white hover:text-primary text-lg px-10 py-4">
+            <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white hover:text-primary text-lg px-10 py-4 bg-transparent">
               <Link to="/services">
                 Explore Services
               </Link>
@@ -154,11 +154,11 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="section-padding bg-secondary/30">
-        <div className="container-custom">
+      <section className="py-20 md:py-28 lg:py-32 bg-secondary/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Our <span className="text-gradient">Services</span>
+              Our <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Services</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Comprehensive solutions designed to accelerate your business growth and operational excellence
@@ -171,7 +171,7 @@ const Index = () => {
               return (
                 <div 
                   key={service.title} 
-                  className="card-service animate-fade-in"
+                  className="bg-card border border-border rounded-xl p-8 shadow-sm transition-all duration-500 hover:shadow-xl hover:scale-105 hover:border-accent/20 group cursor-pointer animate-fade-in"
                   style={{animationDelay: `${index * 150}ms`}}
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -183,7 +183,7 @@ const Index = () => {
                   <p className="text-muted-foreground mb-6">
                     {service.description}
                   </p>
-                  <Button asChild variant="outline" className="btn-secondary group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
+                  <Button asChild variant="outline" className="bg-secondary text-secondary-foreground border border-border px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary group-hover:bg-primary group-hover:text-white group-hover:border-primary">
                     <Link to="/services">
                       Learn More
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -198,7 +198,7 @@ const Index = () => {
 
       {/* Logo Carousel */}
       <section className="py-16 bg-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h3 className="text-2xl font-semibold text-foreground mb-2">
               Trusted by Industry Leaders
@@ -224,11 +224,11 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="section-padding bg-secondary/50">
-        <div className="container-custom">
+      <section className="py-20 md:py-28 lg:py-32 bg-secondary/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Client <span className="text-gradient">Success Stories</span>
+              Client <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Success Stories</span>
             </h2>
             <p className="text-xl text-muted-foreground">
               Real results from real businesses
@@ -236,7 +236,7 @@ const Index = () => {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="card-elevated text-center p-12 animate-fade-in">
+            <div className="bg-card border border-border rounded-xl p-12 shadow-md hover:shadow-lg hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 text-center animate-fade-in">
               <div className="flex justify-center mb-6">
                 {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
                   <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
@@ -277,12 +277,12 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-primary text-white relative overflow-hidden">
+      <section className="py-20 md:py-28 lg:py-32 bg-gradient-to-r from-primary to-primary-light text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-accent-light/20 rounded-full blur-3xl"></div>
         
-        <div className="container-custom relative z-10 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Transform Your Business?
@@ -293,7 +293,7 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button asChild className="bg-white text-primary hover:bg-white/90 text-lg px-10 py-4 shadow-glow">
+              <Button asChild className="bg-white text-primary hover:bg-white/90 text-lg px-10 py-4 shadow-xl">
                 <Link to="/contact">
                   Get Free Consultation
                   <ArrowRight className="ml-2 w-5 h-5" />

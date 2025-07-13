@@ -39,7 +39,7 @@ const Navigation = () => {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-custom-md'
+          ? 'bg-white/95 backdrop-blur-md shadow-lg'
           : 'bg-transparent'
       )}
     >
@@ -81,7 +81,7 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <Button 
               asChild
-              className="btn-hero"
+              className="bg-gradient-to-r from-primary to-primary-light text-primary-foreground px-8 py-4 rounded-lg font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
               <Link to="/contact">Get Started</Link>
             </Button>
@@ -122,7 +122,7 @@ const Navigation = () => {
               <div className="px-4 pt-4">
                 <Button 
                   asChild
-                  className="btn-hero w-full"
+                  className="bg-gradient-to-r from-primary to-primary-light text-primary-foreground px-8 py-4 rounded-lg font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full"
                 >
                   <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                     Get Started
