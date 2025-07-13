@@ -168,7 +168,7 @@
     @apply bg-card border border-border rounded-xl p-8;
     @apply shadow-sm transition-all duration-500;
     @apply hover:shadow-xl hover:scale-105 hover:border-accent/20;
-    @apply group cursor-pointer;
+    @apply cursor-pointer;
   }
   
   /* Text Effects */
